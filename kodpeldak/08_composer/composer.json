@@ -1,0 +1,14 @@
+{
+    "name": "myvendor/logger-demo",
+    "description": "Composer és Monolog – példakód a 08. fejezethez",
+    "type": "project",
+    "require": {
+        "php": ">=8.1",
+        "monolog/monolog": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
