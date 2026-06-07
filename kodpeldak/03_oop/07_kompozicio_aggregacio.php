@@ -77,7 +77,7 @@ class OrderService
     }
 }
 
-// Egy Logger példány több service-ben is felhasználható
+// Egy Logger példány több szolgáltatásban is felhasználható
 $logger       = new Logger();
 $userService  = new UserService($logger);
 $orderService = new OrderService($logger);

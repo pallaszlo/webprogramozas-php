@@ -7,7 +7,7 @@
 
 
 // --- PHP kód beágyazása HTML-be --------------------------------
-// Lásd: 02_syntax_variables_html.php (külön fájl a HTML példához)
+// Lásd: 01b_php_html_beagyazas.php
 
 
 // --- Változók --------------------------------------------------

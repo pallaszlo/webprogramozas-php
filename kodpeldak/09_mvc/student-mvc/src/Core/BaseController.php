@@ -13,7 +13,7 @@ abstract class BaseController
         $viewFile = BASE_PATH . "/views/{$view}.php";
 
         if (!file_exists($viewFile)) {
-            throw new \RuntimeException("View nem található: {$viewFile}");
+            throw new \RuntimeException("Nézet nem található: {$viewFile}");
         }
 
         // Az extract() a $data tömb kulcsait változóként elérhetővé teszi a nézetben

@@ -21,7 +21,7 @@ class Calculator
     {
         if ($b === 0) {
             throw new \InvalidArgumentException(
-                'Division by zero is not allowed'
+                'Nullával való osztás nem megengedett.'
             );
         }
         return $a / $b;
