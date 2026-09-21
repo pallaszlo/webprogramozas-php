@@ -1,0 +1,16 @@
+{
+    "name": "webprog/film-mvc",
+    "description": "MVC feladat megoldása – filmkatalógus DI Containerrel",
+    "type": "project",
+    "require": {
+        "php": ">=8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "start": "php -S localhost:8001 -t public"
+    }
+}

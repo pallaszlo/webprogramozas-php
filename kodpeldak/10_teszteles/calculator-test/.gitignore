@@ -1,0 +1,28 @@
+# A .gitignore fájl tipikus bejegyzései
+
+# Composer függőségek
+/vendor/
+
+# Környezeti változók (jelszavak, API kulcsok)
+.env
+
+# IDE-specifikus fájlok
+.idea/
+.vscode/
+
+# Operációs rendszer fájlok
+.DS_Store
+Thumbs.db
+
+# Log fájlok
+*.log
+
+# Ideiglenes fájlok
+tmp/
+cache/
+
+# PHPUnit gyorsítótár
+.phpunit.result.cache
+
+# Kiegészítés (nem szerepel a könyvben): a PHPUnit gyorsítótár-mappája
+.phpunit.cache/

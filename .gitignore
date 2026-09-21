@@ -1,0 +1,5 @@
+# Composer, környezeti és fejlesztői fájlok
+vendor/
+.env
+.idea/
+.phpunit.result.cache

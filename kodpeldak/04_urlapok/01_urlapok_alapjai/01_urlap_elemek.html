@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>4.1. Űrlapok alapjai</title>
+</head>
+<body>
+
+<!-- ============================================================
+     4.1. Űrlapok alapjai: a könyv 4.2–4.4. kódpéldái.
+     Az űrlapok a process.php-nek küldik az adatokat.
+     ============================================================ -->
+
+<h2>4.2. kódpélda: Űrlap küldése</h2>
+<form action="process.php" method="POST">
+    <input type="text" name="name">
+    <input type="submit" value="Küldés">
+</form>
+
+<h2>4.3. kódpélda: Különböző űrlap elemek</h2>
+<form action="process.php" method="POST">
+    <label for="name">Név:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Jelszó:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="gender">Nem:</label>
+    <select id="gender" name="gender">
+        <option value="male">Férfi</option>
+        <option value="female">Nő</option>
+    </select>
+
+    <label>Érdeklődési körök:</label>
+    <input type="checkbox" id="sports" name="interests[]" value="sports">
+    <label for="sports">Sport</label>
+
+    <input type="checkbox" id="music" name="interests[]" value="music">
+    <label for="music">Zene</label>
+
+    <label for="comments">Megjegyzések:</label>
+    <textarea id="comments" name="comments"></textarea>
+
+    <input type="submit" value="Küldés">
+</form>
+
+<h2>4.4. kódpélda: Űrlapelemek attribútumai</h2>
+<!-- Kiegészítés: a mezők egy űrlapba foglalva, hogy kipróbálhatók legyenek -->
+<form action="process.php" method="POST">
+<input type="text" name="username" required placeholder="Felhasználónév">
+<input type="number" name="age" min="18" max="100">
+<input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+<input type="email" name="email" autocomplete="off">
+<input type="text" name="code" maxlength="6" readonly value="ABC123">
+    <input type="submit" value="Küldés">
+</form>
+
+</body>
+</html>

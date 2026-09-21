@@ -1,0 +1,20 @@
+{
+    "name": "webprog/password-validator",
+    "description": "PHPUnit feladat 1 – PasswordValidator egységtesztek",
+    "type": "project",
+    "require": {
+        "php": ">=8.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10"
+    },
+    "autoload": {
+        "classmap": ["src/"]
+    },
+    "autoload-dev": {
+        "classmap": ["tests/"]
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
+}

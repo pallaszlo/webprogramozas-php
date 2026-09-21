@@ -1,0 +1,7 @@
+{
+    "name": "myvendor/env-demo",
+    "type": "project",
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

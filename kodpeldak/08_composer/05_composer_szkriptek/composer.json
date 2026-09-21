@@ -1,0 +1,11 @@
+{
+    "name": "myvendor/scripts-demo",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    },
+    "scripts": {
+        "start": "php -S localhost:8000 -t public",
+        "test":  "phpunit --testdox"
+    }
+}

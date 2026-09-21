@@ -1,0 +1,20 @@
+{
+    "name": "webprog/mailer-mock",
+    "description": "PHPUnit feladat 2 – NotificationService mock tesztelése",
+    "type": "project",
+    "require": {
+        "php": ">=8.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10"
+    },
+    "autoload": {
+        "classmap": ["src/"]
+    },
+    "autoload-dev": {
+        "classmap": ["tests/"]
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
+}

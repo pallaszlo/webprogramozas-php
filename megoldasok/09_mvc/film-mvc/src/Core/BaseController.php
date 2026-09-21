@@ -1,0 +1,57 @@
+<?php
+
+namespace App\Core;
+
+/** A kontrollerek közös őse: a nézetek megjelenítése és az átirányítás. */
+abstract class BaseController
+{
+    public function __construct(protected BaseModel $model) {}
+
+    /**
+     * Megjeleníti a nézetet a kapott adatokkal, alapértelmezés szerint a layoutba ágyazva.
+     */
+    protected function render(string $view,
+                              array $data = [],
+                              bool $layout = true): void
+    {
+        $viewFile = BASE_PATH . "/views/{$view}.php";
+
+        if (!file_exists($viewFile)) {
+            throw new \RuntimeException("Nézet nem található: {$viewFile}");
+        }
+
+        // Az extract() a $data tömb kulcsait változóként elérhetővé teszi a nézetben
+        ob_start();
+        extract($data);
+        include $viewFile;
+        $content = ob_get_clean();
+
+        if ($layout) {
+            include BASE_PATH . '/views/layout.php';
+        } else {
+            echo $content;
+        }
+    }
+
+    /**
+     * Átirányít a megadott útvonalra, opcionális üzenettel és paraméterekkel, majd
+     * leállítja a szkriptet.
+     */
+    protected function redirect(string $action,
+                                ?string $message = null,
+                                array $params = []): void
+    {
+        $url = "index.php?action={$action}";
+
+        if ($message !== null) {
+            $url .= '&message=' . urlencode($message);
+        }
+
+        foreach ($params as $key => $value) {
+            $url .= '&' . urlencode((string)$key) . '=' . urlencode((string)$value);
+        }
+
+        header("Location: {$url}");
+        exit;
+    }
+}

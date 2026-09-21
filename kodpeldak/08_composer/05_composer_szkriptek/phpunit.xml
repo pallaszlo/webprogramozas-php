@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Kiegészítés (nem szerepel a könyvben): a "composer test" parancs
+     ebből a fájlból tudja, hol vannak a tesztek (lásd a 10. fejezetet). -->
+<phpunit bootstrap="vendor/autoload.php" colors="true">
+    <testsuites>
+        <testsuite name="Pelda">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

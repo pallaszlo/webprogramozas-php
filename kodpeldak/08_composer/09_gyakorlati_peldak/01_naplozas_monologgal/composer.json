@@ -1,0 +1,12 @@
+{
+    "name": "myvendor/logger-demo",
+    "type": "project",
+    "require": {
+        "monolog/monolog": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>4.4. Kliensoldali validáció</title>
+</head>
+<body>
+
+<!-- ============================================================
+     4.4. Kliensoldali és szerveroldali validáció:
+     a könyv 4.23–4.24. kódpéldái. Az űrlap a process.php-nek küld.
+     ============================================================ -->
+
+<h2>4.23. kódpélda: HTML5 kliensoldali validáció</h2>
+<form action="process.php" method="POST">
+    <input type="email" name="email" required>
+    <input type="text" name="phone" pattern="[0-9]{2}-[0-9]{3}-[0-9]{4}">
+    <input type="number" name="age" min="18" max="99">
+    <input type="submit" value="Küldés">
+</form>
+
+<!-- 4.24. JavaScript kliensoldali validáció -->
+<script>
+document.querySelector('form').addEventListener('submit', function (e) {
+    const email = document.querySelector('[name="email"]').value.trim();
+
+    if (email === '') {
+        e.preventDefault();
+        alert('Az e-mail cím megadása kötelező!');
+    }
+});
+</script>
+
+</body>
+</html>
